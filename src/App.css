@@ -1,0 +1,106 @@
+.App {
+  background-color: #000000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+}
+.nav{
+  color: #000000;
+}
+.textz {
+  margin-top: 10px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.col {
+  float: left;
+  
+  padding: 10px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.teste1 {
+  width: 400px;
+  height: 240px;
+  margin-top: 200px;
+}
+
+.teste2 {
+  width: 400px;
+  height: 240px;
+  margin-top: 200px;
+}
+
+.teste3 {
+  width: 400px;
+  height: 240px;
+  margin-top: 200px;
+}
+
+.teste4 {
+  width: 400px;
+  height: 240px;
+  margin-top: 5px;
+}
+
+.teste5 {
+  width: 400px;
+  height: 240px;
+  margin-top: 5px;
+}
+
+.teste6 {
+  width: 400px;
+  height: 240px;
+  margin-top: 5px;
+}
+
+.episodio {
+  font-size: 16px;
+}
+
+.titulo {
+  font-size: 20px;
+}
