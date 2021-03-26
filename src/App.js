@@ -167,18 +167,8 @@ export default function App() {
             <Menubar className="nav" model={items} />
             <header className="App">
                {data.map((el, index) => {
-                  let text = '';
-                  if (index === 0 || index === 3) {
-                     text += '<div className="row">'
-                  }
-                  text += `<div className="col"><img src={require(${el.image})} className="teste1" alt="erro" /><div className="p-text-center textz titulo">${el.name}</div><div className="p-text-center textz episodio">Episódio ${el.episode}</div></div>`
-                  if (index === 2 || index === 5) {
-                     text += '</div>'
-                  }
-                  return (<div dangerouslySetInnerHTML={{ __html: text }}></div>)
-               }
-               )
-               }
+                  return (<h1 className="p-text-center textz">{el.name}</h1>)
+               })}
                <div className="row">
                   <div className="col">
                      <img src={teste1} className="teste1" alt="erro" />
