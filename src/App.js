@@ -12,6 +12,11 @@ import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
 import { Circle } from 'react-preloaders';
 
+
+import Movie from './Movie';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
+
 require('react-dom');
 const axios = require('axios');
 const items = [
@@ -145,6 +150,19 @@ const items = [
 
 
 export default function App() {
+
+   return (
+      <Router>
+         <Switch>
+            <Route path="/movie" component={Movie} />
+            <Route path="/" component={Home} />
+         </Switch>
+      </Router>
+   )
+
+}
+
+const Home = () => {
    const [loading, setLoading] = useState(true);
    const [data, setData] = useState([])
    useEffect(() => {
@@ -160,6 +178,7 @@ export default function App() {
       })
    }, [])
    return (
+
       <Fragment>
 
          <div className="">
@@ -172,7 +191,7 @@ export default function App() {
                <div className="row">
                   <div className="col">
                      <img src={teste1} className="teste1" alt="erro" />
-                     <div className="p-text-center textz titulo">{"teste"}</div>
+                     <div className="p-text-center textz titulo">Shingeki no Kyojin</div>
                      <div className=" p-text-center textz episodio">Episódio 1</div>
                   </div>
                   <div className="col">
@@ -186,8 +205,6 @@ export default function App() {
                      <div className="p-text-center textz episodio">Episódio 3</div>
                   </div>
                </div>
-
-
 
                <div className="row">
                   <div className="col">
@@ -213,5 +230,4 @@ export default function App() {
          <Circle customLoading={loading} background="#000" color="#fff" />;
       </Fragment >
    )
-
-}
+};
